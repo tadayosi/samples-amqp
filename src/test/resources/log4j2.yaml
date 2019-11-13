@@ -1,0 +1,25 @@
+Configuration:
+  status: warn
+  name: SamplesAMQP
+  properties:
+    property:
+      name: filename
+      value: target/samples-amqp.log
+  thresholdFilter:
+    level: debug
+  appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss,SSS} %-5p %m%n"
+
+  Loggers:
+    logger:
+      - name: com.redhat.samples
+        level: debug
+      - name: org.apache.activemq
+        level: error
+    Root:
+      level: info
+      AppenderRef:
+        ref: STDOUT
