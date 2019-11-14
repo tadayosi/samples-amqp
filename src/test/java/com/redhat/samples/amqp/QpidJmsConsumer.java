@@ -24,7 +24,9 @@ public class QpidJmsConsumer extends QpidJmsSupport implements Consumer {
     public void receive(long timeout) throws JMSException {
         try (MessageConsumer consumer = session.createConsumer(queue)) {
             Message message = consumer.receive(timeout);
-            listener.onMessage(message);
+            if (message != null) {
+                listener.onMessage(message);
+            }
         }
     }
 
