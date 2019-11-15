@@ -1,10 +1,8 @@
 package com.redhat.samples.amqp;
 
-import javax.jms.Message;
-import javax.jms.TextMessage;
-
 import com.google.common.collect.ImmutableMap;
 import com.redhat.samples.amqp.support.MessageLogger;
+
 import org.junit.Test;
 
 public class AmqpTest /* extends TestSupport */ {

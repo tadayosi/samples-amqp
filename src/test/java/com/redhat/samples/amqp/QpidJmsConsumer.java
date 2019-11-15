@@ -1,14 +1,10 @@
 package com.redhat.samples.amqp;
 
-import java.util.Map;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageListener;
-import javax.jms.MessageProducer;
-import javax.jms.TextMessage;
 
-import com.redhat.samples.amqp.support.MessageLogger;
 import com.redhat.samples.amqp.support.QpidJmsSupport;
 
 public class QpidJmsConsumer extends QpidJmsSupport implements Consumer {
